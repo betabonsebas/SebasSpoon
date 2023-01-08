@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B29249B296A795000C5A031 /* SebasSpoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29249A296A795000C5A031 /* SebasSpoonApp.swift */; };
+		1B29249D296A795000C5A031 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29249C296A795000C5A031 /* RecipesView.swift */; };
+		1B29249F296A795200C5A031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B29249E296A795200C5A031 /* Assets.xcassets */; };
+		1B2924A3296A795200C5A031 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2924A2296A795200C5A031 /* Preview Assets.xcassets */; };
+		1B2924AD296A795300C5A031 /* SebasSpoonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924AC296A795300C5A031 /* SebasSpoonTests.swift */; };
+		1B2924B7296A795300C5A031 /* SebasSpoonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924B6296A795300C5A031 /* SebasSpoonUITests.swift */; };
+		1B2924B9296A795300C5A031 /* SebasSpoonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924B8296A795300C5A031 /* SebasSpoonUITestsLaunchTests.swift */; };
+		1B2924C7296A7DE400C5A031 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924C6296A7DE400C5A031 /* API.swift */; };
+		1B2924CB296A7E9300C5A031 /* Network+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924CA296A7E9300C5A031 /* Network+Error.swift */; };
+		1B2924CF296A7F4D00C5A031 /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924CE296A7F4D00C5A031 /* RecipeAPI.swift */; };
+		1B2924D1296A82CB00C5A031 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924D0296A82CB00C5A031 /* Recipe.swift */; };
+		1B2924D3296A833000C5A031 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924D2296A833000C5A031 /* SearchResult.swift */; };
+		1B2924D6296A839600C5A031 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924D5296A839600C5A031 /* NetworkClient.swift */; };
+		1B2924D8296A8DB100C5A031 /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2924D7296A8DB100C5A031 /* RecipesViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B2924A9296A795300C5A031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B29248F296A795000C5A031 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B292496296A795000C5A031;
+			remoteInfo = SebasSpoon;
+		};
+		1B2924B3296A795300C5A031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B29248F296A795000C5A031 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B292496296A795000C5A031;
+			remoteInfo = SebasSpoon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B292497296A795000C5A031 /* SebasSpoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SebasSpoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B29249A296A795000C5A031 /* SebasSpoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SebasSpoonApp.swift; sourceTree = "<group>"; };
+		1B29249C296A795000C5A031 /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		1B29249E296A795200C5A031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B2924A0296A795200C5A031 /* SebasSpoon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SebasSpoon.entitlements; sourceTree = "<group>"; };
+		1B2924A2296A795200C5A031 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B2924A8296A795300C5A031 /* SebasSpoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SebasSpoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B2924AC296A795300C5A031 /* SebasSpoonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SebasSpoonTests.swift; sourceTree = "<group>"; };
+		1B2924B2296A795300C5A031 /* SebasSpoonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SebasSpoonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B2924B6296A795300C5A031 /* SebasSpoonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SebasSpoonUITests.swift; sourceTree = "<group>"; };
+		1B2924B8296A795300C5A031 /* SebasSpoonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SebasSpoonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B2924C6296A7DE400C5A031 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		1B2924CA296A7E9300C5A031 /* Network+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Error.swift"; sourceTree = "<group>"; };
+		1B2924CE296A7F4D00C5A031 /* RecipeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
+		1B2924D0296A82CB00C5A031 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		1B2924D2296A833000C5A031 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		1B2924D5296A839600C5A031 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		1B2924D7296A8DB100C5A031 /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B292494296A795000C5A031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B2924A5296A795300C5A031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B2924AF296A795300C5A031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B29248E296A795000C5A031 = {
+			isa = PBXGroup;
+			children = (
+				1B292499296A795000C5A031 /* SebasSpoon */,
+				1B2924AB296A795300C5A031 /* SebasSpoonTests */,
+				1B2924B5296A795300C5A031 /* SebasSpoonUITests */,
+				1B292498296A795000C5A031 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B292498296A795000C5A031 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B292497296A795000C5A031 /* SebasSpoon.app */,
+				1B2924A8296A795300C5A031 /* SebasSpoonTests.xctest */,
+				1B2924B2296A795300C5A031 /* SebasSpoonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B292499296A795000C5A031 /* SebasSpoon */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924D9296A99DF00C5A031 /* App */,
+				1B29249A296A795000C5A031 /* SebasSpoonApp.swift */,
+				1B29249E296A795200C5A031 /* Assets.xcassets */,
+				1B2924A0296A795200C5A031 /* SebasSpoon.entitlements */,
+				1B2924A1296A795200C5A031 /* Preview Content */,
+			);
+			path = SebasSpoon;
+			sourceTree = "<group>";
+		};
+		1B2924A1296A795200C5A031 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924A2296A795200C5A031 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1B2924AB296A795300C5A031 /* SebasSpoonTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924AC296A795300C5A031 /* SebasSpoonTests.swift */,
+			);
+			path = SebasSpoonTests;
+			sourceTree = "<group>";
+		};
+		1B2924B5296A795300C5A031 /* SebasSpoonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924B6296A795300C5A031 /* SebasSpoonUITests.swift */,
+				1B2924B8296A795300C5A031 /* SebasSpoonUITestsLaunchTests.swift */,
+			);
+			path = SebasSpoonUITests;
+			sourceTree = "<group>";
+		};
+		1B2924C5296A7D0600C5A031 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924CC296A7F2500C5A031 /* Network */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B2924C8296A7DE900C5A031 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924C6296A7DE400C5A031 /* API.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1B2924C9296A7E7B00C5A031 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924CA296A7E9300C5A031 /* Network+Error.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1B2924CC296A7F2500C5A031 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924CD296A7F3D00C5A031 /* API */,
+				1B2924C8296A7DE900C5A031 /* Protocol */,
+				1B2924C9296A7E7B00C5A031 /* Extension */,
+				1B2924D0296A82CB00C5A031 /* Recipe.swift */,
+				1B2924D2296A833000C5A031 /* SearchResult.swift */,
+				1B2924D5296A839600C5A031 /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1B2924CD296A7F3D00C5A031 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924CE296A7F4D00C5A031 /* RecipeAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1B2924D9296A99DF00C5A031 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924DA296A99ED00C5A031 /* UI */,
+				1B2924C5296A7D0600C5A031 /* Model */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1B2924DA296A99ED00C5A031 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B2924DB296A99F900C5A031 /* Recipes */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1B2924DB296A99F900C5A031 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				1B29249C296A795000C5A031 /* RecipesView.swift */,
+				1B2924D7296A8DB100C5A031 /* RecipesViewModel.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B292496296A795000C5A031 /* SebasSpoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B2924BC296A795300C5A031 /* Build configuration list for PBXNativeTarget "SebasSpoon" */;
+			buildPhases = (
+				1B292493296A795000C5A031 /* Sources */,
+				1B292494296A795000C5A031 /* Frameworks */,
+				1B292495296A795000C5A031 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SebasSpoon;
+			productName = SebasSpoon;
+			productReference = 1B292497296A795000C5A031 /* SebasSpoon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1B2924A7296A795300C5A031 /* SebasSpoonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B2924BF296A795300C5A031 /* Build configuration list for PBXNativeTarget "SebasSpoonTests" */;
+			buildPhases = (
+				1B2924A4296A795300C5A031 /* Sources */,
+				1B2924A5296A795300C5A031 /* Frameworks */,
+				1B2924A6296A795300C5A031 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B2924AA296A795300C5A031 /* PBXTargetDependency */,
+			);
+			name = SebasSpoonTests;
+			productName = SebasSpoonTests;
+			productReference = 1B2924A8296A795300C5A031 /* SebasSpoonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1B2924B1296A795300C5A031 /* SebasSpoonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B2924C2296A795300C5A031 /* Build configuration list for PBXNativeTarget "SebasSpoonUITests" */;
+			buildPhases = (
+				1B2924AE296A795300C5A031 /* Sources */,
+				1B2924AF296A795300C5A031 /* Frameworks */,
+				1B2924B0296A795300C5A031 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B2924B4296A795300C5A031 /* PBXTargetDependency */,
+			);
+			name = SebasSpoonUITests;
+			productName = SebasSpoonUITests;
+			productReference = 1B2924B2296A795300C5A031 /* SebasSpoonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B29248F296A795000C5A031 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					1B292496296A795000C5A031 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					1B2924A7296A795300C5A031 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 1B292496296A795000C5A031;
+					};
+					1B2924B1296A795300C5A031 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 1B292496296A795000C5A031;
+					};
+				};
+			};
+			buildConfigurationList = 1B292492296A795000C5A031 /* Build configuration list for PBXProject "SebasSpoon" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B29248E296A795000C5A031;
+			productRefGroup = 1B292498296A795000C5A031 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B292496296A795000C5A031 /* SebasSpoon */,
+				1B2924A7296A795300C5A031 /* SebasSpoonTests */,
+				1B2924B1296A795300C5A031 /* SebasSpoonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B292495296A795000C5A031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B2924A3296A795200C5A031 /* Preview Assets.xcassets in Resources */,
+				1B29249F296A795200C5A031 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B2924A6296A795300C5A031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B2924B0296A795300C5A031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B292493296A795000C5A031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B2924CB296A7E9300C5A031 /* Network+Error.swift in Sources */,
+				1B2924D3296A833000C5A031 /* SearchResult.swift in Sources */,
+				1B29249D296A795000C5A031 /* RecipesView.swift in Sources */,
+				1B2924CF296A7F4D00C5A031 /* RecipeAPI.swift in Sources */,
+				1B2924D1296A82CB00C5A031 /* Recipe.swift in Sources */,
+				1B2924C7296A7DE400C5A031 /* API.swift in Sources */,
+				1B2924D8296A8DB100C5A031 /* RecipesViewModel.swift in Sources */,
+				1B2924D6296A839600C5A031 /* NetworkClient.swift in Sources */,
+				1B29249B296A795000C5A031 /* SebasSpoonApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B2924A4296A795300C5A031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B2924AD296A795300C5A031 /* SebasSpoonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B2924AE296A795300C5A031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B2924B7296A795300C5A031 /* SebasSpoonUITests.swift in Sources */,
+				1B2924B9296A795300C5A031 /* SebasSpoonUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B2924AA296A795300C5A031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B292496296A795000C5A031 /* SebasSpoon */;
+			targetProxy = 1B2924A9296A795300C5A031 /* PBXContainerItemProxy */;
+		};
+		1B2924B4296A795300C5A031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B292496296A795000C5A031 /* SebasSpoon */;
+			targetProxy = 1B2924B3296A795300C5A031 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B2924BA296A795300C5A031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1B2924BB296A795300C5A031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		1B2924BD296A795300C5A031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SebasSpoon/SebasSpoon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SebasSpoon/Preview Content\"";
+				DEVELOPMENT_TEAM = 2WD4LJ5535;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.SebasSpoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B2924BE296A795300C5A031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SebasSpoon/SebasSpoon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SebasSpoon/Preview Content\"";
+				DEVELOPMENT_TEAM = 2WD4LJ5535;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.SebasSpoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1B2924C0296A795300C5A031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.SebasSpoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SebasSpoon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SebasSpoon";
+			};
+			name = Debug;
+		};
+		1B2924C1296A795300C5A031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.SebasSpoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SebasSpoon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SebasSpoon";
+			};
+			name = Release;
+		};
+		1B2924C3296A795300C5A031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.SebasSpoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SebasSpoon;
+			};
+			name = Debug;
+		};
+		1B2924C4296A795300C5A031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.SebasSpoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SebasSpoon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B292492296A795000C5A031 /* Build configuration list for PBXProject "SebasSpoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B2924BA296A795300C5A031 /* Debug */,
+				1B2924BB296A795300C5A031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B2924BC296A795300C5A031 /* Build configuration list for PBXNativeTarget "SebasSpoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B2924BD296A795300C5A031 /* Debug */,
+				1B2924BE296A795300C5A031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B2924BF296A795300C5A031 /* Build configuration list for PBXNativeTarget "SebasSpoonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B2924C0296A795300C5A031 /* Debug */,
+				1B2924C1296A795300C5A031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B2924C2296A795300C5A031 /* Build configuration list for PBXNativeTarget "SebasSpoonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B2924C3296A795300C5A031 /* Debug */,
+				1B2924C4296A795300C5A031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B29248F296A795000C5A031 /* Project object */;
+}
