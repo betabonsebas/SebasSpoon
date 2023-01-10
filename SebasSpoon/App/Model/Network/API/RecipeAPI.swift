@@ -14,13 +14,20 @@ enum RecipeAPI: API {
   }
   
   case searchRecipes
+  case recipeInfo(id: Int)
   
   var requestMethod: String {
     "GET"
   }
   
   var requestPath: String? {
-    "/recipes/complexSearch"
+    switch self {
+    case .searchRecipes:
+      return "/recipes/complexSearch"
+    case .recipeInfo(let id):
+      return "/recipes/\(id)/information"
+    }
+    
   }
   
   var requestPathParam: String? {
@@ -28,9 +35,14 @@ enum RecipeAPI: API {
   }
   
   var queryItems: [URLQueryItem]? {
-    [
-      URLQueryItem(name: Constants.apiKeyName, value: apiKey),
-      URLQueryItem(name: Constants.numberName, value: "100")
-    ]
+    var items: [URLQueryItem] = []
+    items.append(URLQueryItem(name: Constants.apiKeyName, value: apiKey))
+    switch self {
+    case .searchRecipes:
+      items.append(URLQueryItem(name: Constants.numberName, value: "100"))
+    case .recipeInfo:
+      items.append(URLQueryItem(name: "includeNutrition", value: "false"))
+    }
+    return items
   }
 }

@@ -9,16 +9,16 @@ import Combine
 import Foundation
 
 protocol Client {
-  func fetch(api: API) -> AnyPublisher<SearchResult, Error>?
+  func fetch<T: Decodable>(api: API) -> AnyPublisher<T, Error>?
 }
 
 class NetworkClient: Client {
-  func fetch(api: API) -> AnyPublisher<SearchResult, Error>? {
+  func fetch<T>(api: API) -> AnyPublisher<T, Error>? where T: Decodable {
     do {
       let request = try api.asURLRequest()
       let anyCancellable = URLSession.shared.dataTaskPublisher(for: request)
         .map { $0.data }
-        .decode(type: SearchResult.self, decoder: JSONDecoder())
+        .decode(type: T.self, decoder: JSONDecoder())
         .mapError({ $0 as Error })
         .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()

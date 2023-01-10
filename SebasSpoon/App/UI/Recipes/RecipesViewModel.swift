@@ -7,9 +7,9 @@
 
 import Combine
 import Foundation
+import SwiftUI
 
 class RecipesViewModel: ObservableObject {
-  
   
   private var cancellationToken: AnyCancellable?
   private let client: Client
@@ -23,7 +23,9 @@ class RecipesViewModel: ObservableObject {
   
   func fetchRecipes() {
     cancellationToken = client.fetch(api: RecipeAPI.searchRecipes)?
-      .map(\.results)
+      .map({ (result: SearchResult) in
+        result.results
+      })
       .sink(receiveCompletion: { completion in
         switch completion {
         case .finished:
@@ -34,5 +36,10 @@ class RecipesViewModel: ObservableObject {
       }, receiveValue: { recipes in
         self.recipes = recipes
       })
+  }
+  
+  func showDetail(recipe: Recipe) -> some View {
+    let viewModel = DetailViewModel(id: recipe.id)
+    return DetailView(viewModel: viewModel)
   }
 }

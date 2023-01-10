@@ -8,34 +8,29 @@
 import SwiftUI
 
 struct RecipesView: View {
-  @State var recipes: [Recipe] = [
-    Recipe(id: 0, title: "Recipe 1", image: "", imageType: ""),
-    Recipe(id: 1, title: "Recipe 2", image: "", imageType: ""),
-    Recipe(id: 2, title: "Recipe 3", image: "", imageType: ""),
-    Recipe(id: 3, title: "Recipe 4", image: "", imageType: "")
-  ]
-  
   @ObservedObject var viewModel = RecipesViewModel()
   
   var body: some View {
-    NavigationView {
-      VStack {
-        List(viewModel.recipes, id: \.id) { recipe in
+    NavigationStack {
+      List(viewModel.recipes, id: \.id) { recipe in
+        NavigationLink(value: recipe) {
           HStack{
-            Image(systemName: "globe")
+            Image("recipe")
               .imageScale(.large)
               .foregroundColor(.accentColor)
             Text(recipe.title)
           }
         }
       }
-      .padding()
+      .navigationDestination(for: Recipe.self, destination: { recipe in
+        viewModel.showDetail(recipe: recipe)
+      })
+      .navigationTitle("Recipes")
     }
-    .navigationTitle("Recipes")
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RecipesViewr_Previews: PreviewProvider {
   static var previews: some View {
     RecipesView()
   }
