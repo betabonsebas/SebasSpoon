@@ -11,9 +11,10 @@ enum RecipeAPI: API {
   struct Constants {
     static let apiKeyName = "apiKey"
     static let numberName = "number"
+    static let query = "query"
   }
   
-  case searchRecipes
+  case searchRecipes(query: String)
   case recipeInfo(id: Int)
   
   var requestMethod: String {
@@ -38,7 +39,10 @@ enum RecipeAPI: API {
     var items: [URLQueryItem] = []
     items.append(URLQueryItem(name: Constants.apiKeyName, value: apiKey))
     switch self {
-    case .searchRecipes:
+    case .searchRecipes(let query):
+      if !query.isEmpty {
+        items.append(URLQueryItem(name: Constants.query, value: query))
+      }
       items.append(URLQueryItem(name: Constants.numberName, value: "100"))
     case .recipeInfo:
       items.append(URLQueryItem(name: "includeNutrition", value: "false"))

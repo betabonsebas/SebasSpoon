@@ -15,9 +15,9 @@ struct RecipesView: View {
       List(viewModel.recipes, id: \.id) { recipe in
         NavigationLink(value: recipe) {
           HStack{
-            Image("recipe")
-              .imageScale(.large)
-              .foregroundColor(.accentColor)
+            AsyncImage(url: URL(string: recipe.image))
+              .frame(width: 60, height: 60)
+              .clipped()
             Text(recipe.title)
           }
         }
@@ -25,6 +25,7 @@ struct RecipesView: View {
       .navigationDestination(for: Recipe.self, destination: { recipe in
         viewModel.showDetail(recipe: recipe)
       })
+      .searchable(text: $viewModel.searchText)
       .navigationTitle("Recipes")
     }
   }

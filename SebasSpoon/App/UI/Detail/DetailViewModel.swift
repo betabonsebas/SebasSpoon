@@ -13,7 +13,24 @@ class DetailViewModel: ObservableObject {
   private let client: Client
   private var id: Int
   
-  @Published var recipe: Recipe?
+  private var recipe: Recipe?
+  @Published var isLoading: Bool = false
+  var image: URL? {
+    return URL(string: recipe?.image ?? "")
+  }
+  
+  var title: String {
+    return recipe?.title ?? ""
+  }
+  
+  var instructions: String {
+    return recipe?.instructions ?? ""
+  }
+  
+  var ingredients: [ExtendedIngredient] {
+    return recipe?.extendedIngredients ?? []
+  }
+  
   
   init(id: Int, client: Client = NetworkClient()) {
     self.id = id
@@ -22,16 +39,19 @@ class DetailViewModel: ObservableObject {
   }
   
   private func fetchRecipe() {
+    isLoading = true
     cancellationToken =  client.fetch(api: RecipeAPI.recipeInfo(id: id))?
-      .sink(receiveCompletion: { completion in
+      .sink(receiveCompletion: { [weak self] completion in
+        self?.isLoading = false
         switch completion {
         case .finished:
           break
         case .failure(let error):
           print(error.localizedDescription)
         }
-      }, receiveValue: { (recipe: Recipe) in
-        self.recipe = recipe
+      }, receiveValue: { [weak self] (recipe: Recipe) in
+        self?.isLoading = false
+        self?.recipe = recipe
       })
   }
 }
